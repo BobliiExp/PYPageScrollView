@@ -31,7 +31,7 @@ PYPageScrollView
 
 ## 实现方案
 	* 已知问题
-        1.直接将所有页面加载到scrollview上内存消耗极大
+	1.直接将所有页面加载到scrollview上内存消耗极大
 	2.控制多个页面交互逻辑代码繁琐，会增加主viewcontroller代码量，不利于业务流程编写
 	3.遇到内存警告不清楚哪些页面或数据缓存应该清理，不方便管理
 	
@@ -45,9 +45,6 @@ PYPageScrollView
 	* 实现办法
 	PYPageScrollView继承于UIScrollView，内部实现分页管理，页面缓存管理，页面切换动画，以及相关页面变化的委托通知外部处理者；
 	
-	
-	
-      
 ## 特点
 
 ## 如何使用
