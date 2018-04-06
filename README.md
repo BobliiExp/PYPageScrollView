@@ -31,6 +31,7 @@ PYPageScrollView
 
 ## 实现方案
 ![](/PYPageScrollView/Resource/image.png)
+
 	* 已知问题
 	1.直接将所有页面加载到scrollview上内存消耗极大
 	2.控制多个页面交互逻辑代码繁琐，会增加主viewcontroller代码量，不利于业务流程编写
@@ -47,7 +48,29 @@ PYPageScrollView
 	
 	
 ## 特点
-	
+	通过自定义ScrollView将分页操作业务单独封装降低程序耦合，提高复用性；
+	页面移动出可见界面后再一定时间没有存在的意义，合理进行释放控制，可以减少内存消耗
+	支持UIView，UIViewController作为页面内容
+
 ## 如何使用
+  工程需要引入pod库
+```c
+pod 'Masonry'
+```
+  需要使用的地方添加引用，并且实现相关委托协议
+```c
+#import "PYPageScrollView.h"
+```
+```c
+@interface ViewController () <PYPageScrollViewDataSource>
+// 根据需求，选择以下任意一个重用方法
+- (UIViewController *)pageScrollView:(PYPageScrollView *)pageScrollView viewControllerForPage:(NSInteger)index;
+- (UIView *)pageScrollView:(PYPageScrollView *)pageScrollView viewForPage:(NSInteger)index;
+```
+如果自己的page有支持内存释放控制（清理相关引用关系方法），可以实现此委托方法关心页面清理情况
+```c
+- (void)pageScrollViewWillCleanView:(PYPageScrollView*)pageScrollView view:(UIView*)view; 
+- (void)pageScrollViewWillCleanViewController:(PYPageScrollView*)pageScrollView vc:(UIViewController*)vc;
+```
 
 ## 扩展
