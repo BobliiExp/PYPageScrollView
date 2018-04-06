@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   name           = "#{pod_name}"
   url            = "https://github.com/BobliiExp/#{name}"
   git_url        = "#{url}.git"
-  version        = "1.0"
+  version        = "1.0.1"
   source_files   = "#{pod_name}/**/*.{h,m}"
 
   s.name         = name
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.homepage     = url
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Bob Lee" => "boblii@hotmail.com" }
-  s.source       = { :git => git_url, :tag => "v#{version}"}
+  s.source       = { :git => git_url, :tag => s.version.to_s}
   
 
   s.ios.deployment_target = '8.0'
