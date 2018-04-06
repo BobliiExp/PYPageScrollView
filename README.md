@@ -30,6 +30,7 @@ PYPageScrollView
     * swift支持
 
 ## 实现方案
+![](/PYPageScrollView/Resource/image.png)
 	* 已知问题
 	1.直接将所有页面加载到scrollview上内存消耗极大
 	2.控制多个页面交互逻辑代码繁琐，会增加主viewcontroller代码量，不利于业务流程编写
@@ -40,7 +41,6 @@ PYPageScrollView
 	同时在内部对已加载页面进行缓存分页逻辑支持，降低耦合；
 	通过已加载数据与当前页的距离，判断是否清理，支持低内存模式，清理重用几率低的缓存数据或页面；
 	增加过度效果提高交互体验
-	![](/PYPageScrollView/Resource/image.png)
 	
 	* 实现办法
 	PYPageScrollView继承于UIScrollView，内部实现分页管理，页面缓存管理，页面切换动画，以及相关页面变化的委托通知外部处理者；
