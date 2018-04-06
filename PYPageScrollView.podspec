@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  pod_name  = "PYPageScrollView"
-  name       = "Cocoa#{pod_name}"
+  pod_name       = "PYPageScrollView"
+  name           = "#{pod_name}"
   url            = "https://github.com/BobliiExp/#{name}"
   git_url        = "#{url}.git"
   version        = "1.0"
