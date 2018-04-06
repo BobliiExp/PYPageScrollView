@@ -1,6 +1,6 @@
 PYPageScrollView
 ===========================
-本自定义控件，主要为左右滚动页面功能提供页面交互管理与缓存方案，demo参考[PYHero](https://github.com/BobliiExp/PYHero)。
+本自定义控件，主要为可左右滑动切换页面或者轮播内容功能提供页面交互管理与缓存方案，demo参考[PYHero](https://github.com/BobliiExp/PYHero)。
 重用页面支持UIViewController、UIView，并且采用AutoLayout布局
 
 ****
@@ -30,7 +30,11 @@ PYPageScrollView
     * swift支持
 
 ## 实现方案
-    基于手机屏幕以及实现业务特点，每屏仅显示一页。所有没不要将所有需要查看的页面加载到scrollview中，只需要默认加载当前页以及上下页，这样用户
+    * 已知问题
+      1.直接将所有页面加载到scrollview上内存消耗极大
+      2.控制多个页面交互逻辑代码繁琐，会增加主viewcontroller代码量，不利于业务流程编写
+      3.遇到内存警告不清楚哪些页面或数据缓存应该清理，不方便管理
+      
 ## 特点
 
 ## 如何使用
