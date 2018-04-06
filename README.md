@@ -22,12 +22,6 @@ PYPageScrollView
     * 如何使用
     * 交互体验
 * [扩展](#扩展)
-    * 自动轮播
-    * 更多页面提示
-    * 展示页数可配置
-    * 切换过度效果
-    * frame布局支持
-    * swift支持
 
 ## 实现方案
 ![](/PYPageScrollView/Resource/image.png)
@@ -74,3 +68,10 @@ pod 'Masonry'
 ```
 
 ## 扩展
+    * 自动轮播
+    
+    * 更多页面提示
+    * 展示页数可配置
+    * 切换过度效果
+    * frame布局支持
+    * swift支持
