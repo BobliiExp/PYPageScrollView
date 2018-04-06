@@ -40,6 +40,8 @@
                      @"PYVCPage",
                      @"PYVCPage"
                      ];
+    
+    [self.pageView reloadData];
 }
 
 #pragma mark PYPageScrollViewDataSource
@@ -57,7 +59,8 @@
     Class cls = NSClassFromString(self.arrData[index]);
     UIViewController *vc = [pageScrollView dequeueReusableViewControllerWithClassName:cls];
     if(vc==nil){
-        vc = [[[NSBundle mainBundle] loadNibNamed:self.arrData[index] owner:nil options:nil] lastObject];
+        vc = [[PYVCPage alloc] initWithNibName:@"PYVCPage" bundle:[NSBundle mainBundle]];
+        [vc loadView];
     }
     
     // 这里根据vc类型可以考虑跟新数据展示

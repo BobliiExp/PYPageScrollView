@@ -17,7 +17,9 @@
 		D176D3F320776C1500EA514B /* PYPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D176D3F220776C1500EA514B /* PYPageScrollView.m */; };
 		D176D3F720776C5400EA514B /* PYVCPage.m in Sources */ = {isa = PBXBuildFile; fileRef = D176D3F520776C5400EA514B /* PYVCPage.m */; };
 		D176D3F820776C5400EA514B /* PYVCPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D176D3F620776C5400EA514B /* PYVCPage.xib */; };
-		D176D3FB2077795E00EA514B /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D176D3FA2077795E00EA514B /* image.png */; };
+		D176D3FD2077806000EA514B /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D176D3FC2077806000EA514B /* image.png */; };
+		D176D3FF2077807200EA514B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D176D3FE2077807200EA514B /* Podfile */; };
+		D176D40120778BD600EA514B /* PYPageScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D176D40020778BD600EA514B /* PYPageScrollView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,9 @@
 		D176D3F420776C5400EA514B /* PYVCPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYVCPage.h; sourceTree = "<group>"; };
 		D176D3F520776C5400EA514B /* PYVCPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYVCPage.m; sourceTree = "<group>"; };
 		D176D3F620776C5400EA514B /* PYVCPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PYVCPage.xib; sourceTree = "<group>"; };
-		D176D3FA2077795E00EA514B /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = SOURCE_ROOT; };
+		D176D3FC2077806000EA514B /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		D176D3FE2077807200EA514B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D176D40020778BD600EA514B /* PYPageScrollView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PYPageScrollView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 		D176D3CE20776A6D00EA514B = {
 			isa = PBXGroup;
 			children = (
+				D176D40020778BD600EA514B /* PYPageScrollView.podspec */,
+				D176D3FE2077807200EA514B /* Podfile */,
 				D176D3D920776A6D00EA514B /* PYPageScrollView */,
 				D176D3D820776A6D00EA514B /* Products */,
 				446D180D7D74F02EE15B917B /* Pods */,
@@ -122,7 +128,7 @@
 		D176D3F92077716600EA514B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D176D3FA2077795E00EA514B /* image.png */,
+				D176D3FC2077806000EA514B /* image.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -187,11 +193,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D176D3FF2077807200EA514B /* Podfile in Resources */,
+				D176D40120778BD600EA514B /* PYPageScrollView.podspec in Resources */,
 				D176D3F820776C5400EA514B /* PYVCPage.xib in Resources */,
 				D176D3E720776A7600EA514B /* LaunchScreen.storyboard in Resources */,
 				D176D3E420776A7600EA514B /* Assets.xcassets in Resources */,
 				D176D3E220776A6D00EA514B /* Main.storyboard in Resources */,
-				D176D3FB2077795E00EA514B /* image.png in Resources */,
+				D176D3FD2077806000EA514B /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
