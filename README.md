@@ -24,7 +24,7 @@ PYPageScrollView
 * [扩展](#扩展)
 
 ## 实现方案
-![](/PYPageScrollView/Resource/image.png)
+  ![](/PYPageScrollView/Resource/image.png)
 
 	* 已知问题
 	1.直接将所有页面加载到scrollview上内存消耗极大
@@ -66,12 +66,21 @@ pod 'Masonry'
 - (void)pageScrollViewWillCleanView:(PYPageScrollView*)pageScrollView view:(UIView*)view; 
 - (void)pageScrollViewWillCleanViewController:(PYPageScrollView*)pageScrollView vc:(UIViewController*)vc;
 ```
+低内存暂用控制，根据交互体验情况选择开启，开启后交互可能会受到影响，比如快速左右反复滑动出现卡顿
+```c
+@property (nonatomic, assign) BOOL lowMemoryEnable;   ///< 是否保持低内存占用，默认NO-只要是不同class的页面都会保持在内存中，交互体验会更佳；YES-内存中只缓存可见页面与备用页面，滑动或切换会重新加载，交互体验较差
+```
 
 ## 扩展
-    * 自动轮播
-    
-    * 更多页面提示
-    * 展示页数可配置
-    * 切换过度效果
-    * frame布局支持
-    * swift支持
+后期将逐渐丰富的功能部分：
+
+    * 自动轮播
+    	在实现分页控制逻辑基础上，可以考虑更多场景的应用，比如轮播效果
+	
+    * 更多页面提示
+   	支持首次使用时，提醒用户右边还有更多页面的抖动效果
+    * 缓存页数可配置
+   	在合理内存使用情况下支持缓存页数配置，优化交互
+    * frame布局支持
+   	支持frame手动布局，必须先设置好scrollview的frame
+    * swift支持
