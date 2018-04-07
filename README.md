@@ -7,7 +7,7 @@ PYPageScrollView
 	
 |Author|YG45|
 |---|---
-|E-mail|Bobliihotmailcom
+|E-mail|Boblii@hotmailcom
 
 ****
 ## 目录
